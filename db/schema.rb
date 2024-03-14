@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema[7.1].define(version: 2024_03_12_011208) do
   create_table "cards", force: :cascade do |t|
+    t.integer "card_id", null: false
     t.string "card_name"
     t.string "card_image"
     t.string "card_type"
@@ -28,6 +29,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_12_011208) do
 
   create_table "deck_lists", force: :cascade do |t|
     t.integer "user_id", null: false
+    t.integer "deck_id", null: false
     t.string "deck_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
